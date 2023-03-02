@@ -19,8 +19,5 @@ public class BasicTests {
 		MainPage.enterASearch(driver, "solera");
 		Utils.sleep(1500);
 		driver.quit();
-		
 	}
-
-	
 }
