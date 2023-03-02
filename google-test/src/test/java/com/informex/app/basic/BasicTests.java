@@ -12,17 +12,15 @@ public class BasicTests {
 	public void loginTest() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-
-		String url = "https://www.google.com/";
-		driver.get(url);
-
-		driver.manage().window().maximize();
+		MainPage.goToMainPage(driver);
 		Utils.sleep(1500);
 		MainPage.acceptCookies(driver);
 		Utils.sleep(1500);
 		MainPage.enterASearch(driver, "solera");
 		Utils.sleep(1500);
 		driver.quit();
-
+		
 	}
+
+	
 }

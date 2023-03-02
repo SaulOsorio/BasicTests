@@ -2,3 +2,4 @@
 1677684573362	Rename type 'Sleep'
 1677684865850	Delete element
 1677685075221	Rename package 'com.informex.behavior.mainpage'
+1677743702391	Extract method 'goToMainPage'

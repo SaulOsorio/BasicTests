@@ -15,4 +15,10 @@ public class MainPage {
 		WebElement searchInput = driver.findElement(By.xpath("//input[@name = 'q']"));
 		searchInput.sendKeys(search + "\n");
 	}
+	
+	public static void goToMainPage(WebDriver driver) {
+		String url = "https://www.google.com/";
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
 }
