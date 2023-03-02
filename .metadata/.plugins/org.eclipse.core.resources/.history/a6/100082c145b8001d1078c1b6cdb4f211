@@ -1,0 +1,31 @@
+package com.informex.app.basic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.informex.app.utils.Sleep;
+public class BasicTests {
+	
+	@Test
+	public void loginTest() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		String url = "https://www.google.com/";
+		driver.get(url);
+		
+		driver.manage().window().maximize();
+		Sleep.sleep(2000);
+		
+		WebElement cookieButton = driver.findElement(By.id(""));
+		//input[@name = 'q']
+		driver.close();
+		
+	}
+
+	
+	
+}

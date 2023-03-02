@@ -1,0 +1,9 @@
+package com.informex.app.basic;
+
+public class BasicTests {
+	
+	
+	public void loginTest() {
+		System.setProperty("webdriver.chrome.driver", "");
+	}
+}
