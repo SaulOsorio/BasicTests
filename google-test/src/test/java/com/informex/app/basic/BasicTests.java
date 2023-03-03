@@ -10,14 +10,19 @@ public class BasicTests {
 	
 	@Test
 	public void loginTest() {
-		WebDriver driver = Utils.setup("firefox");
+		try {
+		WebDriver driver = Utils.setup("firefox");	
 		MainPage.goToMainPage(driver);
-		Utils.sleep(1500);
+		Utils.implicitWait(1500, driver);
 		MainPage.acceptCookies(driver);
-		Utils.sleep(1500);
+		Utils.implicitWait(1500, driver);
 		MainPage.enterASearch(driver, "solera");
-		Utils.sleep(1500);
-		driver.quit();
+		Utils.implicitWait(1500, driver);
+		Utils.teardown(driver);
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 	
 }
